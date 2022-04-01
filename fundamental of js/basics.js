@@ -1,6 +1,6 @@
 let myAge=22
 console.log(myAge);
-//op 22
+//op-22
 
 
 let humanDog=11
