@@ -2,9 +2,9 @@ let personCount=document.getElementById("person-count")
 console.log(personCount)
 
 let count=0
-function increement(){
-    count=count+1
-    personCount.innerText=count
+function increment(){
+    count+=1
+    personCount.textContent=count
     console.log(count)
 }
 
@@ -12,7 +12,12 @@ function increement(){
 // function increement(){
 //     console.log("clicked")
 // }
+let saveEl=document.getElementById("save-el")
+console.log(saveEl)
+
 function save(){
-    console.log(count)
+    // console.log(count)
+    let save=count+" - "
+    saveEl.textContent+=save
+    // console.log(saveEl)
 }
- 
