@@ -20,4 +20,6 @@ function save(){
     let save=count+" - "
     saveEl.textContent+=save
     // console.log(saveEl)
+    personCount.textContent=0
+    count =0
 }
