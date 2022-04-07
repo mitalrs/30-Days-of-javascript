@@ -28,24 +28,24 @@
 }
 .li1{
     /* hours */
-    border:1.9px solid black ;
+    /* border:1.9px solid black ; */
     height: 290px;
     width: 2px;
     display: inline-block;
     position: absolute;
-    top: 28%;
+    top: 37%;
     left: 50%;
     transform: rotate(0deg);
     /* transform-origin: bottom right; */
 }
 .li2{
    /*  minute */
-    border:1.5px solid black ;
+    /* border:1.5px solid black ; */
     height: 270px;
     width: 2px;
     display: inline-block;
     position: absolute;
-    top: 30%;
+    top: 37%;
     left: 50%; 
     transform: rotate(0deg);
     /* transform-origin: bottom left; */
@@ -57,7 +57,7 @@
     width: 2px;
     display: inline-block;
     position: absolute;
-    top: 36%;
+    top: 47%;
     left: 50%; 
     transform: rotate(0deg);
     /* transform-origin: bottom left;*/
