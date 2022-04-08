@@ -39,7 +39,7 @@
     left: 50%;
     transform: rotate(0deg);
     /* transform-origin: bottom right; */
-    animation: hr 3600s infinite;
+    animation: hr 3600s infinite;          
 }
 @keyframes hr{
     0%{
