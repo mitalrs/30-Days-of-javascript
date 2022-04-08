@@ -13,8 +13,8 @@ button{
     margin: auto;
     display: flex;
     justify-content: center;
-    /* align-items: center;*/
-    position: absolute;
+    align-items: center;
+    /* position: absolute; */
     top: 50%;
     left: 50%;
 } 
