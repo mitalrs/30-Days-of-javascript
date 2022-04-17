@@ -31,108 +31,140 @@
 .li1{
     /* hours */
     border:1.9px solid black ;
-    height: 290px;
-    width: 2px;
+    border-radius: 5%;
+    background-color: black;
+    height: 250px;
+    width: 3px;
     display: inline-block;
     position: absolute;
-    top: 19.5%;
+    top: 23.5%;
     left: 50%;
     transform: rotate(0deg);
     /* transform-origin: bottom right; */
-    animation: hr 3600s infinite;          
+    animation: hr linear 3600s infinite;          
 }
 @keyframes hr{
     0%{
-        top: 19.5%;
+        top: 23.5%;
         left: 50%;
         transform: rotate(0deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
     25%{
-        top: 19.5%;
+        top: 23.5%;
         left: 50%;
         transform: rotate(90deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
     50%{
-        top: 20%;
+        top: 23.5%;
         left: 50%;
         transform: rotate(180deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
     75%{
-        top: 20%;
+        top: 20.3%;
         left: 50%;
         transform: rotate(250deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
     100%{
-        top: 19.5%;
+        top: 23.5%;
         left: 50%;
         transform: rotate(360deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
 }
 .li2{
    /*  minute */
     border:1.5px solid black ;
-    height: 270px;
-    width: 2px;
+    border-radius: 5%;
+    background-color: black;
+    height: 210px;
+    width: 3px;
     display: inline-block;
     position: absolute;
-    top: 21.5%;
+    top: 27.5%;
     left: 50%; 
     transform: rotate(0deg);
     /* transform-origin: bottom left; 15s */
-    animation: min 900s infinite;
+    animation: min linear 900s infinite;
 }
 @keyframes min{
     0%{
-        top: 22%;
+        top: 27.5%;
         left: 50%;
         transform: rotate(0deg);
-        transform-origin: bottom;
+        transform-origin: 50% 100%;
     }
     25%{
-        top: 22%;
+        top: 27.5%;
         left: 50%;
         transform: rotate(90deg);
-        transform-origin: bottom;
-    }
+        transform-origin: 50% 100%;    }
     50%{
-        top: 21.5%;
+        top: 27.5%;
         left: 50%;
         transform: rotate(180deg);
-        transform-origin: bottom;
-    }
+        transform-origin: 50% 100%;    }
     75%{
-        top: 22%;
+        top: 27.5%;  
         left: 50%;
         transform: rotate(270deg);
-        transform-origin: bottom;
-    }
+        transform-origin: 50% 100%;    }
     100%{
-        top: 22%;
+        top: 27.5%;
         left: 50%;
         transform: rotate(360deg);
-        transform-origin: bottom;
-    }
+        transform-origin: 50% 100%;    }
 }
 .li3{
     /* sec */
     border:1px solid black ;
-    height: 230px;
-    width: 2px;
+    border-radius: 5px;
+    background-color: black;
+    height: 300px;
+    width: 1px;
     display: inline-block;
     position: absolute;
-    top: 29.5%;
+    top: 21.7%;
     left: 50%; 
     transform: rotate(0deg);
-    /* transform-origin: bottom left;*/
-    animation: sec 10s infinite;
+    transform-origin: 50% 88%;
+    animation: sec linear 15s infinite;
 } 
-
-
+@keyframes sec{
+    0%{
+        top: 21.7%;
+        left: 50%; 
+        transform: rotate(0deg);
+        transform-origin: 50% 88%;
+    }
+    25%{
+        top: 21.7%;
+        left: 50%; 
+        transform: rotate(90deg);
+        transform-origin: 50% 88%;
+    }
+    50%{
+        top: 21.7%;
+        left: 50%; 
+        transform: rotate(180deg);
+        transform-origin: 50% 88%;;
+    }
+    75%{
+        top: 21.7%;
+        left: 50%; 
+        transform: rotate(270deg);
+        transform-origin: 50% 88%;
+    }
+    100%{
+        top: 22.5%;
+        left: 50%; 
+        transform: rotate(360deg);
+        transform-origin: 50% 88%;
+    }
+}
 .center{
     border: 1px solid black;
     border-radius: 50%;
