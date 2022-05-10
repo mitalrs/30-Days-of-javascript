@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   width: 100vw;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-div{
+    border: 2px solid black;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.num, #total,#operater{
+    font-size: 60px;
+}
+.btn-div{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 10px;
+
+}
+.btn{
+    height: 70px;
+    
+}
