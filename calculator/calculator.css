@@ -14,10 +14,10 @@ body{
     top: 20px;
     left: 20px;
     bottom: 20px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 757px;
     height: 200px;
-    background: rgb(51, 47, 47);
+    background: rgb(46, 39, 39);
     border-radius: 10px;
 }
 #f-num{
@@ -28,16 +28,16 @@ body{
   color: rgb(255, 255, 255);
 }
 .main-div{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 800px;
     width: 800px;
-    background-color: rgb(0, 145, 108);
+    background-color: rgb(46, 39, 39);
     z-index: 1;
 }
 
 .button-div{
-    border: 2px solid black;
-    width: 757px;
+    /* border: 2px solid black;*/
+    width: 757px; 
     height: 540px;
     position: relative;
     top: 35px;
@@ -45,7 +45,7 @@ body{
     bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(51, 47, 47);
+    background-color: rgb(46, 39, 39);
     z-index: 1;
 } 
 /* .div{
@@ -64,7 +64,7 @@ body{
     margin: 10px;
     width: 130px;
     height: 100px;
-    font-size: 20px;
+    font-size: 40px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(0,212,255,1) 100%); 
   }
@@ -84,10 +84,11 @@ body{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    font-size: 30px;
 }
 .clear-btn:after{
   content: "";
-  background-color: #ffe54c;
+  background-color: #d4be3e;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -113,6 +114,7 @@ body{
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;  
+    font-size: 35px;
 }
 
 .style-btn{
@@ -131,7 +133,7 @@ body{
 }
 .total:after{
     content: "";
-    background-color: #ffe54c;
+    background-color: #d4be3e;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -142,7 +144,7 @@ body{
 }
 .style-btn:after {
     content: "";
-    background-color: #ffe54c;
+    background-color: #d4be3e;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -178,7 +180,7 @@ body{
 .num:active{
     background-color: #f3f4f6;
     box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
-    transform: translateY(0.125rem);
+    transform: translateX(0.125rem);
 }
 .clear-btn:active {
   background-color: #f3f4f6;
