@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 .body-div{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 400px;
     width: 400px;
     display: flex;
@@ -20,20 +20,33 @@ body{
     align-items: center;
     position: relative;
 }
-.num, #total,#operater{
+.display{
     font-size: 60px;
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    /* border: 2px solid black; */
+    height: 100px;
+    width:370px;
 }
+
 .btn-div{
     display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
-    width: 200px;
-    height: 200px;
+    justify-content: space-around;
+    /* border: 2px solid rgb(224, 223, 223); */
+    width: 370px;
+    height: 180px;
     position: absolute;
-    bottom: 10px;
-
+    bottom: 20px;
+    flex-flow: row wrap;
+    align-content: center;
+   
 }
 .btn{
-    height: 70px;
-    
+    height: 60px;
+    width: 110px;
+    margin: 6px;
+    background-color: rgb(224, 223, 223);
+    border: none;
+    font-size: 25px;
 }
