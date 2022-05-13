@@ -1,67 +1,68 @@
 let spanf = document.getElementById("f-num")
 let num = 0;
 
-
+let str = "";
 
 
 // number function
 function one() {
-    spanf.textContent += "1"
-    num = 1;
+    str += "1";
+    spanf.textContent = str
 }
 function two() {
-    spanf.textContent += "2"
-    num = 2;
-    return num;
+    str += "2";
+    spanf.textContent = str
 }
 function three() {
-    spanf.textContent += "3"
-    num = 3;
+    str += "3";
+    spanf.textContent = str
 }
 function four() {
-    spanf.textContent += "4"
-    num = 4;
+    str += "4";
+    spanf.textContent = str
 }
 function five() {
-    spanf.textContent += "5"
-    num = 5;
+    str += "5";
+    spanf.textContent = str
 }
 function six() {
-    spanf.textContent += "6"
-    num = 6;
+    str += "6";
+    spanf.textContent = str
 }
 function seven() {
-    spanf.textContent += "7"
-    num = 7;
+    str += "7";
+    spanf.textContent = str
 }
 function eight() {
-    spanf.textContent += "8"
-    num = 8;
+    str += "8";
+    spanf.textContent = str
 }
 function nine() {
-    spanf.textContent += "9"
-    num = 9;
+    str += "9";
+    spanf.textContent = str
 }
 function zero() {
-    spanf.textContent += "0"
-    num = 0;
+    str += "0";
+    spanf.textContent = str
 }
 
 
 // operator function
 function add() {
-    spanf.textContent += "+"
+    str += "+";
+    spanf.textContent = str
 }
 function sub() {
-    spanf.textContent += "-"
+    str += "-";
+    spanf.textContent = str
 }
 function mul() {
-    spanf.textContent += "*"
-
+    str += "*";
+    spanf.textContent = str
 }
 function div() {
-    spanf.textContent += "/"
-
+    str += "/";
+    spanf.textContent = str
 }
 
 
@@ -69,8 +70,10 @@ function div() {
 function clearBox() {
     console.log("click");
     spanf.textContent = ""
+    str = "";
 }
 
 function total() {
-    spanf.textContent = Function(spanf.textContent)
+    spanf.textContent = new Function("return " + str)()
+    // spanf.textContent=eval(spanf.textContent)
 }
