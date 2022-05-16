@@ -1,12 +1,11 @@
-var now = new Date();
-console.log(now)
+const secondHand=document.querySelector(".second-hand")
 
-// var time = now.getHours() * 3600 +
-// 					    now.getMinutes() * 60 +
-// 					    now.getSeconds() * 1 +
-// 					    now.getMilliseconds() / 1000;
 
-//                         console.log(time)
-
-var time = now.getHours()
-console.log(time)
+function setDate(){
+    const now = new Date();
+    const second = now.getSeconds();
+    const secondsDegree=((seconds/60)*360);
+     
+    secondHand.style.transsform=`rotate(${secondsDegrees}deg)`
+    console.log(seconds);
+}

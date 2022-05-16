@@ -1,7 +1,7 @@
 let card1 = 11
 let card2 = 10
 let sumCrd = card1 + card2
-let cards=[card1,card2]
+let cards = [card1, card2]
 console.log(sumCrd)
 let message = ""
 
@@ -10,7 +10,7 @@ let messageEl = document.querySelector("#message-el")
 let sum = document.querySelector("#sum")
 let card = document.querySelector("#card")
 
-function startGame(){
+function startGame() {
     renderGame()
 }
 
@@ -25,13 +25,20 @@ function renderGame() {
     }
     messageEl.textContent = message
     sum.textContent = "Sum: " + sumCrd
-    card.textContent = "Cards: " + cards[0]+" "+cards[1]
+
+    card.textContent = "Cards: " 
+    for (let i = 0; i < cards.length; i++) {
+    card.textContent += cards[i] +" "
+    }
+    
 }
 
-function newCard(){
+function newCard() {
     console.log("Drawing a new card from the deck!")
-    let cardn= 2
-    sumCrd+=cardn
+    let cardn = 2
+    sumCrd += cardn
+    cards.push(cardn)
+    console.log(cards)
     renderGame()
-    
+
 }
