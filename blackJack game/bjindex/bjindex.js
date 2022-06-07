@@ -1,5 +1,10 @@
-let card1 = 11
-let card2 = 10
+function getRandemoCard(){
+    return 5
+}
+
+
+let card1 = getRandemoCard()
+let card2 = getRandemoCard()
 let sumCrd = card1 + card2
 let cards = [card1, card2]
 console.log(sumCrd)
@@ -35,10 +40,12 @@ function renderGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck!")
-    let cardn = 2
+    let cardn = getRandemoCard()
     sumCrd += cardn
     cards.push(cardn)
     console.log(cards)
     renderGame()
 
 }
+
+
