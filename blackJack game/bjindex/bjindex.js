@@ -1,5 +1,5 @@
 function getRandemoCard(){
-    return 5
+    return Math.floor(Math.random()*13)+1
 }
 
 
