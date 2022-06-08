@@ -1,5 +1,13 @@
 function getRandemoCard(){
-    return Math.floor(Math.random()*13)+1
+    // return Math.floor(Math.random()*13)+1
+    let value = Math.floor(Math.random()*13)+1
+    if(value===1){
+        return 11
+    } else if(value ===11 || value ===12 || value===13){
+        return 10
+    }else{
+        return value
+    }
 }
 
 
