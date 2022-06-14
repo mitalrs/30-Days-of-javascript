@@ -11,19 +11,30 @@ function getRandemoCard(){
 }
 
 
-let card1 = getRandemoCard()
-let card2 = getRandemoCard()
-let sumCrd = card1 + card2
-let cards = [card1, card2]
+// let card1 = getRandemoCard()
+// let card2 = getRandemoCard()
+//let blackjack = false
+let sumCrd = 0
+let cards = []
 console.log(sumCrd)
 let message = ""
+let isAlive = false
 
 
 let messageEl = document.querySelector("#message-el")
 let sum = document.querySelector("#sum")
 let card = document.querySelector("#card")
 
+console.log(cards)
+
 function startGame() {
+    isAlive = true
+    let randomone=getRandemoCard()
+    let randomtwo=getRandemoCard()
+    cards = [randomone,randomtwo]
+    sum = randomone+randomtwo
+
+
     renderGame()
 }
 
