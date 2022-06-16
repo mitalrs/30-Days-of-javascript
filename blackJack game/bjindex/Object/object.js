@@ -20,3 +20,15 @@ let airbnbCastle={
 
 console.log(airbnbCastle.bookNow)
 console.log(airbnbCastle.available)
+
+
+//function in side of object
+let player={
+    name:"some",
+    chip:200,
+    demofn: function(){
+        console.log("hii")
+    }
+
+}
+player.demofn()

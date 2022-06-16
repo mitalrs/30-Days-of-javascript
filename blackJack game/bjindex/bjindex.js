@@ -1,6 +1,5 @@
 
 
-
 // let card1 = getRandemoCard()
 // let card2 = getRandemoCard()
 let hasblackjack = false
