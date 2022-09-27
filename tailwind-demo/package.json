@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css":"tailwind build -i src/style.css -o public/style.css --watch",
+    "watch":"watch \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8",
+    "watch": "^1.0.2"
+  }
+}
