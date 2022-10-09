@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Cursed Timer ULiL;
+    src: url(https://grawish.com/frontend-THA/htmls/fonts/calcfont.ttf);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #111827;
+    color: white;
+    border: 1px solid #9AABD8;
+    height: 240px;
+    width: 500px;
+    border-radius: 10px;
+   
+}
+
+.home-div{
+    color: #F94F6D;
+    background-color: black;
+    height: 90px;
+    width: 90px;
+     border-radius: 5px; 
+     font-family: Cursed Timer ULiL;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+}
+
+.guest-div{
+    color: #F94F6D;
+    background-color: black;
+    height: 90px;
+    width: 90px; 
+    border-radius: 5px;
+    font-family: Cursed Timer ULiL;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 1px solid #9AABD8;
+    border-radius: 5px;
+    font-family: Cursed Timer ULiL;
+    color: white;
+    font-size: 17px; 
+    margin: 3px;
+}
