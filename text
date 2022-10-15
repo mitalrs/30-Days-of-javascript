@@ -1,0 +1,19 @@
+//ulEl.innerHTML += "<li>"+myLeads[i] +"</li>"
+        //another way to do this
+        // const li = document.createElement("li")
+        // li.innerText = myLeads[i]
+        // ulEl.append(li)
+
+        // listItems += "<li><a target='_blank' href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+
+
+
+
+
+        ///////localstorage
+         //localStorage.setItem("myLeads", "www.examplelead.com")
+// myLeads = JSON.parse(myLeads)
+// myLeads.push("www.some.com")
+// myLeads = JSON.stringify(myLeads)
+// console.log(typeof myLeads
+// localStorage.clear()
