@@ -17,10 +17,6 @@ if(leadsFromLocalStorage){
     render(myLeads)
 }
 
-// const tabs = [
-//     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
-// ]
-
 tabBtn.addEventListener("click", function(){
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
@@ -29,10 +25,6 @@ tabBtn.addEventListener("click", function(){
         render(myLeads)
     })
 
-    // console.log(tabs[0])
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
 })
 
 function render(leads) {
@@ -41,7 +33,7 @@ function render(leads) {
         
         listItems += `
         <li>
-            <a href='${leads[i]} ' target='_blanck'>
+            <a href='${leads[i]}' target='_blank'>
                 ${leads[i]} 
             </a>
         </li>
