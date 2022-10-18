@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Generate a<p>random password</p></h1>
-    <span>Never use an insecure password again</span>
-    <button onclick="pswGeneratare()">Generate passwords</button>
-    <hr>
-    <div>
-        <p id="ps1"></p>
-        <br>
-        <br>
-        <br>
-        <p id="ps2"></p>
+    <div class="main-div">
+        <main class="main">
+            <div class="centerdiv">
+                <h1 class="white">Generate a<p class="green">random password</p>
+                </h1>
+                <span class="span">Never use an insecure password again</span>
+                <button onclick="pswGeneratare()" class="gen-btn">Generate passwords</button>
+                <div class="hr"> </div>
+                <div class="ps-div">
+                    <div class="ps1-div">
+                        <p id="ps1"></p>
+                        <button id="copy-btn1" class="cpbtn">
+                            <i class="fa-regular fa-clone fa-xl"></i>
+                        </button>
+                    </div>
+                    <div class="ps2-div">
+                        <p id="ps2"></p>
+                        <button id="copy-btn2" class="cpbtn">
+                            <i class="fa-regular fa-clone fa-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
