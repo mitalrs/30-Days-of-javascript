@@ -17,48 +17,49 @@
         </div>
 
         <div class="button-div">
-            <button class="clear-btn" onclick="clearBox()">C</button>
-            <div>
-                <button class="num" onclick="zero(0)">0</button>
+            <div class="line4">
+                <button class="style-btn" onclick="clearBox()">C</button>
+               
+                    <button class="num" onclick="zero(0)">0</button>
+              
+                <button class="style-btn" onclick="total()">=</button>
+                <button class="style-btn" onclick="add()">+</button>
             </div>
-            <button class="total" onclick="total()">=</button>
-            <button class="style-btn" onclick="add()">add</button>
 
+            <div class="line3">
+                
+                    <button class="num" onclick="seven()">7</button>
+                
+               
+                    <button class="num" onclick="eight()">8</button>
+               
+               
+                    <button class="num" onclick="nine()">9</button>
+               
+                <button class="style-btn" oninvalid="div()">/</button>
+            </div>
+            <div class="line2">
+               
+                    <button class="num" onclick="four()">4</button>
+               
+                    <button class="num" onclick="five()">5</button>
+                
+                    <button class="num" onclick="six()">6</button>
+               
+                <button class="style-btn" onclick="mul()">x</button>
+            </div>
+           
+            <div class="line1">
+                
+                    <button class="num" onclick="one()">1</button>
 
-            <div class="div">
-                <button class="num" onclick="one()">1</button>
+                    <button class="num" onclick="two()">2</button>
+                
+                    <button class="num" onclick="three()">3</button>
+               
+                <button class="style-btn" onclick="sub()">-</button>
             </div>
-            <div class="div">
-                <button class="num" onclick="two()">2</button>
-            </div>
-            <div class="div">
-                <button class="num" onclick="three()">3</button>
-            </div>
-            <button class="style-btn" onclick="sub()">Substract</button>
-
-
-            <div class="div">
-                <button class="num" onclick="four()">4</button>
-            </div>
-            <div class="div">
-                <button class="num" onclick="five()">5</button>
-            </div>
-            <div class="div">
-                <button class="num" onclick="six()">6</button>
-            </div>
-            <button class="style-btn" onclick="mul()">Multiply</button>
-
-
-            <div class="div">
-                <button class="num" onclick="seven()">7</button>
-            </div>
-            <div class="div">
-                <button class="num" onclick="eight()">8</button>
-            </div>
-            <div class="div">
-                <button class="num" onclick="nine()">9</button>
-            </div>
-            <button class="style-btn" oninvalid="div()">Dividing</button>
+           
         </div>
     </div>
 

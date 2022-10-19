@@ -69,7 +69,7 @@ function div() {
 // clear and total function
 function clearBox() {
     console.log("click");
-    spanf.textContent = ""
+    spanf.textContent = "0"
     str = "";
 }
 
