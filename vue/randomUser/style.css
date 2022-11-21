@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+button{
+    color: black;
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.male{
+    background-color: rgb(158, 158, 252);
+    border: 5px solid rgb(158, 158, 252);
+}
+.female{
+    background-color: rgb(248, 157, 207);
+    border: 2px solid rgb(248, 157, 207);
+}
