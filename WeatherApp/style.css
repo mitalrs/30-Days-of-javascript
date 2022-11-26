@@ -7,6 +7,20 @@
 :root{
     --spacing-medium: 8px;
     --spacing-regular: 16px;
+
+    --font-small: .5rem;
+    --font-regular: 1rem;
+    --fint-large: 2rem;
+    --font-xl: 4rem;
+
+    --font-semibold: 600;
+}
+
+h1,h2{
+    margin: 0;
+}
+p{
+    margin: var(--spacing-medium);
 }
 
 body{
@@ -41,15 +55,31 @@ body{
     grid-area: current;
     text-align: center;
 }
+#current-forcast .temp{
+    font-size: var(--font-xl);
+}
+#current-forcast .description,
+#current-forcast .min-max-temp{
+    font-size: var(--font-regular);
+    font-weight: var(--font-semibold);
+}
+
+
 #hourly-forcast{
     grid-area: hourly;
 }
+
+
 #five-day-forcast{
     grid-area: fiveday;
 }
+
+
 #feels-like{
     grid-area: feelslike;
 }
+
+
 #humidity{
     grid-area: humidity;
 }
