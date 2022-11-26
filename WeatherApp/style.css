@@ -58,6 +58,9 @@ body{
 #current-forcast .temp{
     font-size: var(--font-xl);
 }
+#current-forcast .description{
+    text-transform: capitalize;
+}
 #current-forcast .description,
 #current-forcast .min-max-temp{
     font-size: var(--font-regular);
