@@ -67,11 +67,18 @@ body{
     font-weight: var(--font-semibold);
 }
 
-
+/* syle for hourlyForcast */
 #hourly-forcast{
     grid-area: hourly;
+    text-align: center;
 }
-
+#hourly-forcast .hourly-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(100px, 1fr);
+    overflow-x: auto;
+}
 
 #five-day-forcast{
     grid-area: fiveday;
