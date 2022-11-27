@@ -52,10 +52,17 @@ const loadFeelLike = ({main: {feels_like}})=>{
 
 }
 
+const loadHumidity = ({main: {humidity}})=>{
+  let container = document.querySelector("#humidity");
+  container.querySelector(".humidity-value").textContent = `${humidity} %`;
+
+}
+
 document.addEventListener("DOMContentLoaded", async()=>{
   const currentWeather = await  getCurrentweatherData();
   loadCurrentForcast(currentWeather)
   const hourlyForcast = await getHourlyForcast(currentWeather);
   loadHourlyForcast(hourlyForcast)
   loadFeelLike(currentWeather);
+  loadHumidity(currentWeather);
 })
