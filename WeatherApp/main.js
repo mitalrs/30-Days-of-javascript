@@ -38,7 +38,7 @@ const loadHourlyForcast = (hourlyForcast)=>{
 
   for(let {temp, icon, dt_txt} of dataFor12Hours){
     innerHTMLString += ` <article>
-    <h2 class="time">${dt_txt.split(" ")[1]}</h2>
+    <h3 class="time">${dt_txt.split(" ")[1]}</h3>
     <img class="icon" src="${createIconUrl(icon)}">
     <p class="hourly-temp">${formatTmprature(temp)}</p>
     </article>`
@@ -46,9 +46,16 @@ const loadHourlyForcast = (hourlyForcast)=>{
   hourlyContainer.innerHTML = innerHTMLString;
 }
 
+const loadFeelLike = ({main: {feels_like}})=>{
+  let container = document.querySelector("#feels-like");
+  container.querySelector(".feels-like-temp").textContent = formatTmprature( feels_like);
+
+}
+
 document.addEventListener("DOMContentLoaded", async()=>{
   const currentWeather = await  getCurrentweatherData();
   loadCurrentForcast(currentWeather)
   const hourlyForcast = await getHourlyForcast(currentWeather);
   loadHourlyForcast(hourlyForcast)
+  loadFeelLike(currentWeather);
 })

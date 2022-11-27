@@ -80,6 +80,18 @@ body{
     overflow-x: auto;
     gap: var(--spacing-medium);
 }
+#hourly-forcast .hourly-container .time{
+
+}
+#hourly-forcast .hourly-container .icon{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+#hourly-forcast .hourly-container .hourly-temp{
+    font-size: var(--font-regular);
+    font-weight: var(--font-semibold);
+}
 
 #five-day-forcast{
     grid-area: fiveday;
@@ -88,9 +100,11 @@ body{
 
 #feels-like{
     grid-area: feelslike;
+    text-align: center;
 }
 
 
 #humidity{
     grid-area: humidity;
+    text-align: center;
 }
