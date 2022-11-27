@@ -78,6 +78,7 @@ body{
     grid-auto-flow: column;
     grid-auto-columns: minmax(100px, 1fr);
     overflow-x: auto;
+    gap: var(--spacing-medium);
 }
 
 #five-day-forcast{
