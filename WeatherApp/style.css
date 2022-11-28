@@ -115,9 +115,16 @@ body{
 .five-day-forcast-container .day-wise-forcast .min-temp{
     opacity: 50%;
 }
+.five-day-forcast-container .day-wise-forcast .max-temp{
+    justify-self: end;
+}
 .five-day-forcast-container .day-wise-forcast .icon{
     width: 75px;
     height: 75px;
+}
+.five-day-forcast-container .day-wise-forcast .day{
+    /* text-transform: capitalize; */
+    justify-self: start;
 }
 
 #feels-like{
