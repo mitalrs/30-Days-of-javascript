@@ -1,5 +1,7 @@
 const API_Key ="1674fe49ce8caad4acdd3c2c5c332c8a";
 
+const DAYS_OF_THE_WEEK = ["Sun","Mon","Tus","Wed","thu","Fri","Sat"];
+
 const getCurrentweatherData = async()=>{
     const city= "pune";
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}&units=metric`);
@@ -31,7 +33,7 @@ const loadCurrentForcast = ({name, main:{temp, temp_max, temp_min}, weather:[{de
 }
 
 const loadHourlyForcast = (hourlyForcast)=>{
-  console.log(hourlyForcast);
+  // console.log(hourlyForcast);
   let dataFor12Hours = hourlyForcast.slice(1, 13);
   const hourlyContainer = document.querySelector('.hourly-container');
   let innerHTMLString = '';
@@ -44,6 +46,21 @@ const loadHourlyForcast = (hourlyForcast)=>{
     </article>`
   }
   hourlyContainer.innerHTML = innerHTMLString;
+}
+
+const calculateDayWiseForcast = (hourlyForcast) =>{
+  let dayWiseForcast = new Map();
+
+  for(let Forcast of hourlyForcast){
+    const [date] = Forcast.dt_txt.split(" ");
+    const dayOfTheWeek = DAYS_OF_THE_WEEK[new Date(date).getDay()]
+    console.log(dayOfTheWeek);
+  }
+}
+
+const loadFiveDayForcast = (hourlyForcast) =>{
+  console.log(hourlyForcast);
+  const dayWiseForcast = calculateDayWiseForcast(hourlyForcast);
 }
 
 const loadFeelLike = ({main: {feels_like}})=>{
@@ -62,7 +79,8 @@ document.addEventListener("DOMContentLoaded", async()=>{
   const currentWeather = await  getCurrentweatherData();
   loadCurrentForcast(currentWeather)
   const hourlyForcast = await getHourlyForcast(currentWeather);
-  loadHourlyForcast(hourlyForcast)
+  loadHourlyForcast(hourlyForcast);
+  loadFiveDayForcast(hourlyForcast);
   loadFeelLike(currentWeather);
   loadHumidity(currentWeather);
 })
