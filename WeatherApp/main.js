@@ -2,6 +2,13 @@ const API_Key = "1674fe49ce8caad4acdd3c2c5c332c8a";
 
 const DAYS_OF_THE_WEEK = ["Sun", "Mon", "Tus", "Wed", "Thu", "Fri", "Sat"];
 
+const getCitiesUsingGeolocation = async (searchText)=>{
+  const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_Key}`)
+  // http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_Key}
+  //http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+  return response.json();
+}
+
 const getCurrentweatherData = async () => {
   const city = "pune";
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_Key}&units=metric`);
@@ -116,7 +123,34 @@ const loadHumidity = ({ main: { humidity } }) => {
 
 }
 
+function debounce(func){
+  let timer;
+  return (...args)=>{
+    clearTimeout(timer);
+    timer = setTimeout(()=>{
+      console.log("debaunce")
+      func.apply(this, args)
+    }, 500)
+  }
+}
+
+const onSearchChange = async (event)=>{
+  let { value } = event.target;
+  const listOfCities = await getCitiesUsingGeolocation(value);
+  let options = "";
+  for(let {lat, lon, name, state, country} of listOfCities){
+    options += ` <option data-city-details='${JSON.stringify(lat, lon, name)}' value="${name}, ${state}, ${country}"></option>`;
+  }
+  document.querySelector("#cities").innerHTML = options;
+}
+
+const debaunceSearch = debounce((event)=>onSearchChange(event))
+
 document.addEventListener("DOMContentLoaded", async () => {
+
+  const searchInput = document.querySelector('#search');
+  searchInput.addEventListener("input",debaunceSearch);
+
   const currentWeather = await getCurrentweatherData();
   loadCurrentForcast(currentWeather)
   const hourlyForcast = await getHourlyForcast(currentWeather);
