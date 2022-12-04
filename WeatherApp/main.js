@@ -32,15 +32,25 @@ const loadCurrentForcast = ({ name, main: { temp, temp_max, temp_min }, weather:
   //             <p class="min-max-temp">High Low</p>
 }
 
-const loadHourlyForcast = (hourlyForcast) => {
+const loadHourlyForcast = ({main:{temp: tempNow}, weather:[{icon: iconNow}]}, hourlyForcast) => {
   // console.log(hourlyForcast);
-  let dataFor12Hours = hourlyForcast.slice(1, 13);
+  const timeFormater = Intl.DateTimeFormat("en", {
+    hour12:true, hour:"numeric"
+  })
+  let dataFor12Hours = hourlyForcast.slice(2, 14);
   const hourlyContainer = document.querySelector('.hourly-container');
-  let innerHTMLString = '';
+  let innerHTMLString = 
+  ` <article>
+    <h3 class="time">Now</h3>
+    <img class="icon" src="${createIconUrl(iconNow)}">
+    <p class="hourly-temp">${formatTmprature(tempNow)}</p>
+    </article>`
+    ;
 
   for (let { temp, icon, dt_txt } of dataFor12Hours) {
+
     innerHTMLString += ` <article>
-    <h3 class="time">${dt_txt.split(" ")[1]}</h3>
+    <h3 class="time">${timeFormater.format(new Date(dt_txt))}</h3>
     <img class="icon" src="${createIconUrl(icon)}">
     <p class="hourly-temp">${formatTmprature(temp)}</p>
     </article>`
@@ -110,7 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const currentWeather = await getCurrentweatherData();
   loadCurrentForcast(currentWeather)
   const hourlyForcast = await getHourlyForcast(currentWeather);
-  loadHourlyForcast(hourlyForcast);
+  loadHourlyForcast(currentWeather, hourlyForcast);
   loadFiveDayForcast(hourlyForcast);
   loadFeelLike(currentWeather);
   loadHumidity(currentWeather);
